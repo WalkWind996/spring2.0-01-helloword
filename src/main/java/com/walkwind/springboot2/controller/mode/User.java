@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Version:
  * @Create: 2021-03-23 11:19
  **/
+//@Component
 @ConfigurationProperties(prefix = "user")
 public class User {
 
@@ -43,7 +44,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + userName + '\'' +
+                "userName='" + userName + '\'' +
                 ", age=" + age +
                 '}';
     }
