@@ -1,6 +1,10 @@
 package com.walkwind.springboot2.controller.mode;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 /**
  * @Program: spring2.0-01-helloword
@@ -10,42 +14,16 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Version:
  * @Create: 2021-03-23 11:19
  **/
-//@Component
-@ConfigurationProperties(prefix = "user")
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
+@ConfigurationProperties(prefix = "friends")
 public class User {
 
     private String userName;
     private Integer age;
+    private String lastName;
 
-    public User() {
-    }
-
-    public User(String userName, Integer age) {
-        this.userName = userName;
-        this.age = age;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }

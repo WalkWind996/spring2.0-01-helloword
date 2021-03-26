@@ -1,0 +1,6 @@
+pets:
+  - cat
+  - dog
+  - pig
+    行内写法
+pets: [cat,dog,pig]
